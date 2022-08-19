@@ -1,0 +1,37 @@
+body{
+    background-image: url("../assets/pattern-background-desktop.svg");
+}
+
+.card-container{
+    width: 400px;
+}
+
+/* contenedor de la imagen */
+.card-img-container{
+    background-size: cover;
+    background-position: auto;
+}
+
+
+.card-info-container p {
+    font-size: 13px;
+    letter-spacing: 1px;
+}    
+.card-pay-button-container{
+    height: 45px;
+    font-size: 13px;
+}
+
+.card-plan-box-container #p1,
+.card-plan-box-container #p2{
+    font-size: 15px;
+}
+
+.card-plan-box-container #p3{
+    font-size: 13px;
+    padding: 0 15px 0 75px;
+}
+
+.card-pay-container p{
+    font-size: 13px;
+}

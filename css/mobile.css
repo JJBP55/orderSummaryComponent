@@ -1,0 +1,210 @@
+/*
+
+The designs were created to the following widths:
+
+- Mobile: 375px
+- Desktop: 1440px
+
+
+## Typography
+
+### Body Copy
+
+- Font size (paragraph): 16px
+*/
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
+
+:root{
+    --paleBlue: hsl(225, 100%, 94%);
+    --brightBlue: hsl(245, 75%, 52%);
+    --veryPaleBlue: hsl(225, 100%, 98%);
+    --desaturatedBlue: hsl(224, 23%, 55%);
+    --darkBlue: hsl(223, 47%, 23%);
+}
+
+body{
+    box-sizing: border-box;
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    font-family: 'Red Hat Display', sans-serif;
+    background-color: var(--paleBlue);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url("../assets/pattern-background-mobile.svg");
+    background-repeat: no-repeat;
+    background-size: 100% 50%;
+    background-position: top;
+}
+
+/* Contenedor principal de la card */
+.card-container{
+    width: 375px;
+    height: 600px;
+    display: grid;
+    grid-template-rows: repeat(4, 150px);
+}
+
+/* contenedor de la imagen */
+.card-img-container{
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+    background-image: url("../assets/illustration-hero.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+/* Contenedor del titulo y el parrafo */
+.card-info-container{
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card-info-container h1{
+    font-size: 25px;
+    font-weight: 900;
+    margin: 40px 0 15px 0;
+    color: var(--darkBlue);
+}
+
+.card-info-container p {
+    font-size: 16px;
+    font-weight: 500;
+    margin: 0 36px;
+    padding-left: 20px;
+    padding-right: 20px;
+    text-align: center;
+    line-height: 20px;
+    color: var(--desaturatedBlue);
+}
+
+/* Contenedor de la seccion de los planes */
+.card-plan-container{
+    grid-column: 1 / 2;
+    grid-row: 3 / 4;
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+.card-plan-box-container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 300px;
+    height: 100px;
+    background-color: var(--veryPaleBlue);
+    border-radius: 10px;
+}
+
+.card-plan-box-container figure{
+    background-image: url("../assets/icon-music.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 50px;
+    height: 50px;
+    margin: 20px 15px;
+}
+
+.card-plan-box-container div #p1{
+    font-weight: bold;
+    margin: 0;
+    color: var(--darkBlue);
+}
+
+.card-plan-box-container div #p2{
+    margin: 0;
+    color: var(--desaturatedBlue);
+}
+
+.card-plan-box-container #p3{
+    color: var(--brightBlue);
+    font-weight: bold;
+    font-size: medium;
+    padding-left: 50px;
+    text-decoration: underline;
+}
+
+.card-plan-box-container #p3:hover{
+    color: var(--desaturatedBlue);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Contenedor del boton de pago y cancelar orden*/
+.card-pay-container{
+    grid-column: 1 / 2;
+    grid-row: 4 / 5;
+    background-color: white;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}   
+
+.card-pay-button-container{
+    width: 300px;
+    height: 60px;
+    border-radius: 10px;
+    border: 0;
+    background-color: var(--brightBlue);
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    box-shadow: 1px 20px var(--veryPaleBlue);
+    letter-spacing: 1px;
+}
+
+.card-pay-button-container:hover{
+    background-color: var(--desaturatedBlue);
+    cursor: pointer;
+}
+.card-pay-container p{
+    font-weight: bold;
+    color: var(--desaturatedBlue);
+}
+
+.card-pay-container p:hover{
+    color: var(--darkBlue);
+    cursor: pointer;
+}
+
+
+@media (max-width: 375px){
+    .card-container{
+        width: 315px;
+    }
+    .card-info-container p {
+        margin: 0;
+    }
+    .card-plan-box-container{
+        width: 270px;
+    }
+    .card-plan-box-container figure{
+        width: 41.33px;
+        height: 41.33px;
+        margin: 16.532px 12.399px;
+    }
+    .card-plan-box-container #p3{
+        padding-left: 41.33px;
+    }
+    .card-pay-button-container{
+        width: 270px;
+        height: 50px;
+    }
+}
