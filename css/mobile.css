@@ -166,7 +166,7 @@ body{
     color: white;
     font-weight: bold;
     font-size: 16px;
-    box-shadow: 1px 20px var(--veryPaleBlue);
+    box-shadow: 1px 15px var(--veryPaleBlue);
     letter-spacing: 1px;
 }
 
